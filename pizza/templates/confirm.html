@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h2>Your Selection of {{ pizza_name }} has been added to your Cart!</h2>
+        <p>{{quantity}} @ ${{price_of_item}} = ${{ cost }}</p>
+    {% if instructions %}
+        <p>Special Instructions: {{ instructions }}</p>
+    {% endif %}
+        <div>
+            <p>
+             <a href='/order' role='button' class='outline'>Order more pizza?</a>
+                <a href='/cart' role='button' class='primary'>Checkout</a>
+            </p>
+        </div>
+{% endblock %}

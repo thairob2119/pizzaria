@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Our Fabulous Menu!</h1>
+    <div class="menu-display">
+        {% for item in items %}
+            <details name=menu>
+                <summary class='menu-item'>
+                    <h3 class='item'>
+                        {% if item.on_special %}
+                            <i class="fas fa-pizza-slice" style="color: rgb(255, 0, 0);"></i>
+                            {{ item.item }}
+                        {% else %}
+                            {{ item.item }}
+                        {% endif %}
+
+                    </h3>
+                    <p class='menu-price'>${{ "%.2f" | format(item.price | float) }}</p>
+                </summary>
+
+            <p class='menu-description'>
+                {{ item.description }}
+            </p>
+            </details>
+        {% endfor %}
+    </div>
+
+{% endblock %}

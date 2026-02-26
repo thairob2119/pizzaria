@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css">
+    <title>Robert's Pizzaria</title>
+    <link rel='icon' type='image/x-icon' href="{{ url_for('static', filename='pizza-icon.png') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  </head>
+  <body>
+    <!---->
+    <section>
+        <nav>
+            <ul>
+                <img src="{{ url_for('static', filename='pizza-icon.png') }}" alt="icon of a slice of pizza">
+                <li><strong>Robert's Pizzaria</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/order">Order</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!---->
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
