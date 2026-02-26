@@ -1,0 +1,30 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.special-item{
+    font-weight: 900;
+    color: #FF3830;
+}
+
+.menu-price{
+    margin-left: auto;
+    margin-bottom:0.5rem;
+}
+
+.item{
+    font-size: 1.1rem;
+    margin-bottom:0.5rem;
+}
+
+.menu-description{
+    padding-left: 1.5rem
+}
+
